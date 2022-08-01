@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export const Rewards = () => {
-  return <div>s</div>;
+  return <div>rewards</div>;
 };
