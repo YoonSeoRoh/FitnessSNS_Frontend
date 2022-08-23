@@ -10,6 +10,10 @@ export const GlobalStyle = () => (
         box-sizing: border-box;
       }
 
+      body,
+      html {
+      }
+
       a {
         text-decoration: none;
         color: inherit;

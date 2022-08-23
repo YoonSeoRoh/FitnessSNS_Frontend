@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+## Fitness SNS Frotend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
+### 프로젝트 설명
+🏃‍♂️생활운동 리워드 적립 웹/앱 어플리케이션
+- 자신의 운동량 체크 및 운동시 지역별로 리워드를 적립한다.
+- 적립된 리워드를 제휴사 쿠폰으로 교환할 수 있다.
+- 운동 인증을 통해 마이페이지에서 자신의 운동주기를 체크할 수 있고, SNS에 인증된 사진을 게시물로 등록할 수 있다.
+- [화면설계 바로가기]() | [디자인]()
 
-## Available Scripts
+### 개발 인원 및 기간
 
-In the project directory, you can run:
+- 개발기간 : 2022/07/26 ~ 2022/09/07(예정)
+- 개발 인원 : 프론트엔드 2명, 백엔드 2명, 디자이너 1명
+- 팀원 : 노윤서(FE), 박보라(FE), 김태현(BE), 백도현(BE), 김소희(Design)
+- [Frontend github 링크](https://github.com/wecode-bootcamp-korea/26-1st-WASH-Korea-frontend)
+- [Backend github 링크](https://github.com/wecode-bootcamp-korea/26-1st-WASH-Korea-backend)
 
-### `yarn start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 기술 스택 및 기능 상세
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 기술 스택
 
-### `yarn test`
+> - Front-End : React.js, Typescript, Redux, Redux-tookit, Emotion
+> - Back-End : Node.js, Express.js, AWS(EC2, RDS)
+> - Common : Github, Notion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 기능 상세
+|구분|상세 기능|담당자|
+|------|---|---|
+|로그인|(소셜)로그인, 회원가입|노윤서|
+|마이페이지|개인정보, 리워드 적립정보, 캘린더, SNS 연동 관리|노윤서|
+|리워드|운동 인증, 리워드 적립/교환, 그룹별(지역별) 챌린지|박보라|
+|피드|개인피드 게시물관리, SNS 연동|박보라|
+|게시판|질문, (지역별)모임, 공지사항, 운동가이드|공통|
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Reference
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 이 코드를 활용하여 이득을 취하거나 무단 배포할 경우 법적으로 문제될 수 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
