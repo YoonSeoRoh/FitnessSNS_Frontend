@@ -2,30 +2,31 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import { loginValidation } from "src/libs/validations/loginValidation";
+import { signupInfoValidation } from "src/libs/validations/signupInfoValidation";
 
 type formData = {
-  email: string;
   password: string;
+  passwordConfirm: string;
 };
 
-export const Login = () => {
+export const SignUpInfo = () => {
   const {
     register,
     handleSubmit,
     formState: { isValid, errors },
   } = useForm<formData>({
-    resolver: yupResolver(loginValidation),
+    resolver: yupResolver(signupInfoValidation),
     mode: "onChange",
   });
   const onSubmit = (data: formData) => console.log(data);
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="email" {...register("email")} />
-        <p>{errors.email?.message}</p>
+        <p>email</p>
         <input type="password" {...register("password")} />
         <p>{errors.password?.message}</p>
+        <input type="passwordConfirm" {...register("passwordConfirm")} />
+        <p>{errors.passwordConfirm?.message}</p>
         <button type="submit" disabled={!isValid}>
           submit
         </button>
