@@ -6,10 +6,9 @@ import { loginValidation } from "src/libs/validations/loginValidation";
 
 type formData = {
   email: string;
-  password: string;
 };
 
-export const Login = () => {
+export const SignUpEmail = () => {
   const {
     register,
     handleSubmit,
@@ -18,21 +17,23 @@ export const Login = () => {
     resolver: yupResolver(loginValidation),
     mode: "onChange",
   });
-  const handleBtnClick = (data: formData) => {
-    //api 연결
+  const handleSend = (data: formData) => {
+    //api 연결 -> 인증 요청
     console.log(data);
+  };
+  const handleDone = () => {
+    //api 연결 -> 인증 이메일 확인
   };
   return (
     <>
-      <form onSubmit={handleSubmit(handleBtnClick)}>
+      <form onSubmit={handleSubmit(handleSend)}>
         <input type="email" {...register("email")} />
         <p>{errors.email?.message}</p>
-        <input type="password" {...register("password")} />
-        <p>{errors.password?.message}</p>
         <button type="submit" disabled={!isValid}>
-          submit
+          인증 요청
         </button>
       </form>
+      <button onClick={handleDone}>인증 확인</button>
     </>
   );
 };

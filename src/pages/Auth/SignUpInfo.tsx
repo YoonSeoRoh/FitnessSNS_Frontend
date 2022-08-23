@@ -18,10 +18,13 @@ export const SignUpInfo = () => {
     resolver: yupResolver(signupInfoValidation),
     mode: "onChange",
   });
-  const onSubmit = (data: formData) => console.log(data);
+  const handleBtnClick = (data: formData) => {
+    //api 연결
+    console.log(data);
+  };
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(handleBtnClick)}>
         <p>email</p>
         <input type="password" {...register("password")} />
         <p>{errors.password?.message}</p>
