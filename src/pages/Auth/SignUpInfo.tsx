@@ -28,7 +28,7 @@ export const SignUpInfo = () => {
         <p>email</p>
         <input type="password" {...register("password")} />
         <p>{errors.password?.message}</p>
-        <input type="passwordConfirm" {...register("passwordConfirm")} />
+        <input type="password" {...register("passwordConfirm")} />
         <p>{errors.passwordConfirm?.message}</p>
         <button type="submit" disabled={!isValid}>
           submit
