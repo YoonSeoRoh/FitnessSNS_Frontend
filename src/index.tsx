@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
+import { store } from "./reducers";
 import { ThemeProvider } from "@emotion/react";
 import { GlobalStyle } from "./styles/Global";
 import { Router } from "./Router";
