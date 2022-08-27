@@ -6,16 +6,25 @@ export const GlobalStyle = () => (
     styles={css`
       ${reset}
 
+      @font-face {
+        font-family: "Pretendard-Regular";
+        src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+          format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
       * {
         box-sizing: border-box;
-        background: #333;
       }
 
       body,
       html {
-        width: 750px;
+        width: 375px;
         margin: 0 auto;
         background: #fff;
+        font-family: "Pretendard-Regular";
+        outline: 1px solid #333;
       }
 
       a {
