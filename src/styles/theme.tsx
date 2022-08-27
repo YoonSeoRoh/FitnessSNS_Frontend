@@ -5,8 +5,9 @@ export interface ThemeProps {
 export const theme: ThemeProps = {
   bgColor: "#f0f3f8",
   mainColor: "#68F7CC",
-  fontBlack: "#000000",
-  fontWhite: "#ffffff",
+  fontBlack: "#333",
+  fontGray: "#666",
+  fontWhite: "#fff",
 
   wrapper: {
     width: "100%",
