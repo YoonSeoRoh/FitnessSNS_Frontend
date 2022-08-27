@@ -8,10 +8,14 @@ export const GlobalStyle = () => (
 
       * {
         box-sizing: border-box;
+        background: #333;
       }
 
       body,
       html {
+        width: 750px;
+        margin: 0 auto;
+        background: #fff;
       }
 
       a {
