@@ -20,10 +20,16 @@ export const GlobalStyle = () => (
 
       body,
       html {
-        width: 375px;
-        margin: 0 auto;
-        background: #fff;
         font-family: "Pretendard-Regular";
+      }
+
+      #root {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        width: 375px;
+        height: 812px;
         outline: 1px solid #333;
       }
 
