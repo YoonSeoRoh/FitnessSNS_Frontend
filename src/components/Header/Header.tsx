@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/react";
-import styled from "@emotion/styled";
 
 const navStyle = css`
   display: flex;
@@ -11,7 +10,7 @@ const navStyle = css`
   height: 58px;
 `;
 
-const Point = styled.div`
+const pointStyle = css`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,9 +35,8 @@ const Point = styled.div`
   }
 `;
 
-const Menu = styled.div`
+const menuStyle = css`
   width: 48px;
-  margin-left: 17px;
   background: url("/images/menu.svg") no-repeat 100%;
   cursor: pointer;
 `;
@@ -48,14 +46,14 @@ export const Header = () => {
     <nav css={navStyle}>
       <p css={{ cursor: "pointer" }}>로고</p>
       <div css={{ display: "flex" }}>
-        <Point>
+        <div css={pointStyle}>
           <img
             src="/images/coin.svg"
             css={{ heihgt: "15px", objectFit: "contain" }}
           />
           <p className="myPoint">1,200</p>
-        </Point>
-        <Menu />
+        </div>
+        <div css={menuStyle} />
       </div>
     </nav>
   );
