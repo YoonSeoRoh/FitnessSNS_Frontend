@@ -26,11 +26,11 @@ export const GlobalStyle = () => (
       #root {
         position: relative;
         left: 50%;
-        top: 50%;
+        top: 30px;
         transform: translateX(-50%);
         width: 375px;
-        height: 812px;
-        outline: 1px solid #333;
+        height: 768px;
+        outline: 1px solid;
       }
 
       a {
