@@ -31,7 +31,7 @@ const tabStyle = css`
     ::after {
       content: "";
       position: absolute;
-      bottom: 0;
+      bottom: 2px;
       left: 0;
       width: 63px;
       height: 3px;
@@ -43,7 +43,6 @@ const tabStyle = css`
 `;
 
 const mainWrapper = css`
-  display: grid;
   position: relative;
   height: 581px;
   background-color: #f5f5f8;
@@ -155,19 +154,19 @@ const btnCommon = css`
   width: 295px;
   height: 58px;
 
-  font-weight: 700;
-  font-size: 16px;
   color: #fff;
-  /* Primary */
 
   background: #00bf68;
   border-radius: 10px;
   border: none;
 
+  cursor: pointer;
+
   &.btnStart {
     background: #00bf68 url("/images/start.svg") no-repeat 91px center;
   }
 `;
+
 const recordTodo = css`
   position: absolute;
   left: 50%;
@@ -179,6 +178,7 @@ const recordTodo = css`
 
   letter-spacing: -0.25px;
   color: #666666;
+  cursor: pointer;
 
   :after {
     content: "";
@@ -192,12 +192,51 @@ const recordTodo = css`
 `;
 
 const listStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 20px;
   width: 335px;
   height: 54px;
 
   background: #ffffff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
+
+  cursor: pointer;
+
+  :first-child {
+    bottom: 82px;
+  }
+  :last-child {
+    bottom: 14px;
+  }
+
+  .chart {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    flex: 1;
+  }
+
+  a {
+    display: block;
+    flex: 4;
+    font-family: "Pretendard";
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: -0.25px;
+    text-align: center;
+  }
+
+  .right {
+    display: block;
+    width: 14px;
+    height: 14px;
+    flex: 0.8;
+  }
 `;
 
 export const Main = () => {
@@ -229,18 +268,23 @@ export const Main = () => {
             </div>
           </div>
           <button css={btnCommon} className="btnStart">
-            <span css={{ paddingLeft: 28 }}>운동 시작하기</span>
+            <span css={{ paddingLeft: 28, fontWeight: 700, fontSize: 16 }}>
+              운동 시작하기
+            </span>
           </button>
           <p css={recordTodo}>오늘 운동 기록</p>
         </div>
         <div>
           <ul>
             <li css={listStyle}>
-              <img src="/images/chart.svg" />
+              <img src="/images/chart.svg" className="chart" />
               <a>나의 운동기록</a>
+              <img src="/images/right.svg" className="right" />
             </li>
             <li css={listStyle}>
+              <img src="/images/chart.svg" className="chart" />
               <a>진행 중인 챌린지</a>
+              <img src="/images/right.svg" className="right" />
               <img />
             </li>
           </ul>
