@@ -2,7 +2,6 @@
 import React from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { pointer } from "@testing-library/user-event/dist/types/pointer";
 
 const navStyle = css`
   display: flex;
@@ -40,7 +39,7 @@ const Point = styled.div`
 const Menu = styled.div`
   width: 48px;
   margin-left: 17px;
-  background: url("/images/menu.png") no-repeat 100%;
+  background: url("/images/menu.svg") no-repeat 100%;
   cursor: pointer;
 `;
 
@@ -51,7 +50,7 @@ export const Header = () => {
       <div css={{ display: "flex" }}>
         <Point>
           <img
-            src={require("../../assets/common/coin.png")}
+            src="/images/coin.svg"
             css={{ heihgt: "15px", objectFit: "contain" }}
           />
           <p className="myPoint">1,200</p>
