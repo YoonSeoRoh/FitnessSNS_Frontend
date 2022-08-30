@@ -1,8 +1,11 @@
+/** @jsxImportSource @emotion/react */
 import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { loginValidation } from "src/libs/validations/loginValidation";
+import Button from "src/components/Button";
+//import Button from "@/components/Button";
 
 type formData = {
   email: string;
@@ -29,9 +32,14 @@ export const Login = () => {
         <p>{errors.email?.message}</p>
         <input type="password" {...register("password")} />
         <p>{errors.password?.message}</p>
-        <button type="submit" disabled={!isValid}>
-          submit
-        </button>
+        <Button
+          style="primary"
+          size="large"
+          onClick={handleSubmit(handleBtnClick)}
+          disabled={!isValid}
+        >
+          로그인 하기
+        </Button>
       </form>
     </>
   );
