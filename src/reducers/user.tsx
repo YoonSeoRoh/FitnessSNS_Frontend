@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setUserAsync } from "../actions/user";
-
-export interface User {
-  email: string;
-  password: string;
-}
+import { User } from "@/interfaces/user";
 
 const initialState: User = {
   email: "",
