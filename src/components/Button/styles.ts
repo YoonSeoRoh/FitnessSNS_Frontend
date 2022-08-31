@@ -2,9 +2,21 @@ import { css } from "@emotion/react";
 import { ButtonStyle, ButtonSize } from "./index";
 
 export const Size = {
-  small: 36,
-  medium: 46,
-  large: 58,
+  small: {
+    height: 36,
+    fontSize: 16,
+    fontWeight: 700,
+  },
+  medium: {
+    height: 46,
+    fontSize: 16,
+    fontWeight: 700,
+  },
+  large: {
+    height: 58,
+    fontSize: 16,
+    fontWeight: 700,
+  },
 };
 
 export const Style = {
@@ -17,7 +29,7 @@ export const Style = {
     bgColor: "#00BF68",
   },
   gray: {
-    color: "#333333",
+    color: "#888888",
     bgColor: "#F0F0F3",
   },
 };
@@ -43,7 +55,9 @@ export const size = (size: ButtonSize) => {
   return (
     Size[size] &&
     css`
-      height: ${Size[size]}px;
+      height: ${Size[size]["height"]}px;
+      font-size: ${Size[size]["fontSize"]}px;
+      font-weight: ${Size[size]["fontWeight"]};
     `
   );
 };
