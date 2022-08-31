@@ -4,7 +4,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 import { loginValidation } from "src/libs/validations/loginValidation";
+import Input from "src/components/Input";
 import Button from "src/components/Button";
+//import Input from "@/components/Input";
 //import Button from "@/components/Button";
 
 type formData = {
@@ -25,12 +27,19 @@ export const Login = () => {
     //api 연결
     console.log(data);
   };
+  const handleChange = () => {
+    //
+  };
   return (
     <>
       <form onSubmit={handleSubmit(handleBtnClick)}>
-        <input type="email" {...register("email")} />
+        <Input type="email" {...register("email")} onChange={handleChange} />
         <p>{errors.email?.message}</p>
-        <input type="password" {...register("password")} />
+        <Input
+          type="password"
+          {...register("password")}
+          onChange={handleChange}
+        />
         <p>{errors.password?.message}</p>
         <Button
           style="primary"
